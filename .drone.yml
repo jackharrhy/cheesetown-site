@@ -5,7 +5,7 @@ steps:
 - name: publish-to-docker
   image: plugins/docker
   settings:
-    repo: jackharrhy/toolbox
+    repo: jackharrhy/cheesetown-site
     auto_tag: true
     username:
       from_secret: docker_username
