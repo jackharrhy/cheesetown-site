@@ -1,0 +1,43 @@
+body, html {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	margin: 0;
+	background-color: black;
+	align-content: center;
+	font-family: Helvetica, sans-serif;
+}
+
+.bg-image {
+	z-index: -1;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-image: url('../assets/server-image.png');
+	filter: blur(3px);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header {
+	display: flex;
+	width: 100%;
+
+	justify-content: center;
+	flex-direction: column;
+
+	img {
+		align-self: center;
+	}
+
+	h2 {
+		color: white;
+		text-shadow: 2px 2px 2px black;
+		text-align: center;
+		font-size: 2em;
+	}
+}
