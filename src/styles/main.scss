@@ -8,6 +8,10 @@ body {
 	background-color: black;
 	align-content: center;
 	font-family: Helvetica, sans-serif;
+
+	color: white;
+	text-shadow: 2px 2px 2px black;
+	text-align: center;
 }
 
 .bg-image {
@@ -35,9 +39,10 @@ header {
 	}
 
 	h2 {
-		color: white;
-		text-shadow: 2px 2px 2px black;
-		text-align: center;
 		font-size: 2em;
+	}
+
+	h4 {
+		opacity: 0.5;
 	}
 }
