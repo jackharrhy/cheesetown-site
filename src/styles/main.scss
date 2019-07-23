@@ -1,17 +1,22 @@
+$breakpoint-mobile: 600px;
+
 body, html {
 	height: 100%;
 }
 
 body {
-	display: flex;
 	margin: 0;
 	background-color: black;
-	align-content: center;
 	font-family: Helvetica, sans-serif;
-
 	color: white;
 	text-shadow: 2px 2px 2px black;
 	text-align: center;
+}
+
+#wrap {
+	height: 100%;
+	display: flex;
+	align-content: center;
 }
 
 .bg-image {
@@ -32,17 +37,41 @@ header {
 	width: 100%;
 
 	justify-content: center;
+	align-items: center;
 	flex-direction: column;
 
 	img {
 		align-self: center;
+		max-width: 90vw;
 	}
 
 	h2 {
 		font-size: 2em;
 	}
 
+	.button {
+		margin: 0 0 0.5em 0;
+		padding: 0.6em;
+		border-radius: 2px;
+		background-color: rgba(0,0,30,0.5);
+
+		&:hover {
+			background-color: rgba(0,0,100,0.5);
+		}
+	}
+
 	h4 {
-		opacity: 0.5;
+		margin: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
+	}
+
+	@media (max-width: $breakpoint-mobile) {
+		h2 {
+			font-size: 1.2em;
+		}
 	}
 }
