@@ -1,14 +1,18 @@
-# build environment
-FROM node:10.15-alpine as builder
-RUN mkdir -p /usr/src/app
+# build
+FROM node:12-alpine as build
+
 WORKDIR /usr/src/app
+
 COPY package.json /usr/src/app/package.json
-RUN npm install
-COPY . /usr/src/app
+RUN npm install --silent
+
+COPY . /usr/src/app/
 RUN npm run build
 
- # production environment
-FROM nginx:1.13.9-alpine
-COPY --from=builder /usr/src/app/build /usr/share/nginx/html
+# prod
+FROM nginx:alpine
+
+COPY --from=build /usr/src/app/dist /usr/share/nginx/html
+
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  cheesetown-site:
+    image: jackarrhy/cheesetown-site
+    build: ./.
+    ports:
+      - "8080:80"
